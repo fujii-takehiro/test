@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<!--以降はページには表示されないheadコンテンツ。-->
+<head>
+	<meta charset="utf-8">
+	<title>ACCESS | KISSA official website</title>
+	<!--概要欄用の説明文がこの箇所-->
+	<meta name="description" content="これは練習のためのサイトです">
+	<!--スマホで見るときに見やすく整形するための指示。width=device-widthを指定することで崩れなくなる-->
+	<meta name="viewport" content="width=device-width">
+	<!--ハンバーガーメニューを表示させるためのJSファイルを読み込む指示-->
+	<script src="../js/toggle-menu.js"></script>
+	<link rel="stylesheet" href="../prac.css/practice_common.css">
+	<link rel="stylesheet" href="../prac.css/access.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<header class="header">
+		<div class="header-inner">
+			<a class="header-logo" href="../index.html">
+				<img src="../images/common/logo-header.png" alt="LOGO">
+			</a>
+			<button class="toggle-menu-button"></button>
+			<div class="header-site-menu">
+				<nav class="site-menu">
+					<ul>
+						<li><a href="../prac.html/concept.html">CONCEPT</a></li>
+						<li><a href="../prac.html/menu.html">MENU</a></li>
+						<li><a href="../prac.html/shop.html">SHOP</a></li>
+						<li><a href="../prac.html/access.html">ACCESS</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<main class="main">
+		<div class="title">
+			<h1>ACCESS</h1>
+			<p>アクセス・お問い合わせ</p>
+		</div>
+		<div class="map">
+			<h2>アクセスマップ</h2>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d25593.963100754394!2d137.85358484999998!3d36.6926408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1642256374174!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+		</div>
+		<div class="contact">
+			<h2>お問い合わせフォーム</h2>
+			<form action="#">
+				<dl class="form-area">
+					<dt><span class="required">お名前</span></dt>
+					<dd><input class="input-text" type="text" name="name" required></dd>
+					<dt><span class="required">メールアドレス</span></dt>
+					<dd><input class="input-text" type="email" name="email" required></dd>
+					<dt>お電話番号</dt>
+					<dd><input class="input-text" type="tel" name="tel"></dd>
+					<dt>お問い合わせ種別</dt>
+					<dd>
+						<select class="select-box" name="genre">
+							<option value="ご予約について" selected>ご予約について</option>
+							<option value="メニューについて">メニューについて</option>
+							<option value="営業時間について">営業時間について</option>
+						</select>
+					</dd>
+					<dt>お客様について</dt>
+					<dd>
+						<label class="radio-button"><input type="radio" name="user-type" value="一般のお客様" checked>一般のお客様</label>
+						<label class="radio-button"><input tyoe="radio" name="user-type" value="お取引さま">お取引さま</label>
+						<label class="radio-button"><input type="radio" name="user-type" value="その他">その他</label>
+					</dd>
+					<dt><span class="required">お問い合わせ内容</span></dt>
+					<dd><textarea class="message" name="message" required></textarea></dd>
+				</dl>
+				<p class="confirm-text">ご入力内容をご確認のうえ、お間違い無ければ[Submit]ボタンを押してください。</p>
+				<button class="Submit-button" type="submit">Submit</button>
+			</form>
+		</div>
+	</main>
+	<footer class="footer">
+		<nav class="site-menu">
+			<ul>
+				<li><a href="../prac.html/concept.html">CONCEPT</a></li>
+				<li><a href="../prac.html/menu.html">MENU</a></li>
+				<li><a href="../prac.html/shop.html">SHOP</a></li>
+				<li><a href="../prac.html/access.html">ACCESS</a></li>
+			</ul>
+		</nav>
+		<a class="footer-logo" href="/index.html">
+			<img src="../images/common/logo-footer.png" alt="LOGO">
+		</a>
+		<p class="footer-tel">TEL 01-2345-6789</p>
+		<p class="footer-time">OPEN Fri-Sun 11:00-16:00</p>
+		<p class="copyright"><small>&copy;Kissa</small></p>
+	</footer>
+</body>
+
+</html>

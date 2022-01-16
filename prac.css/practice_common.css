@@ -1,0 +1,181 @@
+/* まず最初に一行目に文字コードを指定しなければならない */
+@charset "utf-8";
+
+/* 次にブラウザに独自に設定されている規定スタイルがあるので、それを解除してからCSSを書く */
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  /* 要素の幅とサイズの計算方法を指定する */
+  box-sizing: border-box;
+}
+
+ul,ol {
+  list-style: none;
+}
+
+/*a要素で作成したリンクの文字色をinheritで親要素を継承する事とする*/
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  font-family: sans-selif;
+  font-size: 16px;
+  color: #000;
+  line-height: 1;
+  /*line-heightは行間指定*/
+  background-color: #fff;
+}
+
+img {
+  max-width: 100%;
+  /*実務では画像を2倍の大きさで用意することが多いが、親要素から飛び出すことがあるため、最大幅を指定しておく*/
+}
+
+/*初めにヘッダーサイズの指定。レスポンシブ対応のためには、初めに幅をmax-widthで指定しておくとブラウザに合わせて可変する表示にできる*/
+.header-inner {
+  max-width: 1200px;
+  height: 110px;
+  margin-left: auto; /*auto=ブラウザの幅から要素の幅を引いた値を、左右均等に分配して余白する*/
+  margin-right: auto;
+  padding: 0 40px 0 40px;
+  display: flex; /*display　ボックスの表示形式を指定するプロパティ*/
+  justify-content: space-between; /*アイテムを均等に配置し、先頭と末尾に寄せる指定*/
+  align-items: center;
+}
+
+.toggle-menu-button {
+  display: none;
+}
+
+.header-logo {
+  display: block; /*a要素はインライン要素のため幅の指定ができないため、displayプロパティでblock指定して変えられるようにする*/
+  width: 170px;
+}
+
+.site-menu ul {
+  display: flex;
+}
+
+.site-menu ul li {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.site-menu ul li a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+.footer {
+  color: #fff;
+  background-color: #24211b;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo {
+  display: block;
+  width: 235px;
+  margin-top: 90px;
+}
+
+.footer-tel {
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 28px;
+}
+
+.footer-time{
+  font-size: 13px;
+  margin-top: 16px;
+}
+
+.copyright {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 90px;
+}
+
+@media (max-width: 800px) {
+  /*ここに書いたCSSは800px以下の画面幅の時だけ適用される*/
+  .site-menu ul {
+    display: block;
+    text-align: center;
+  }
+
+  .site-menu li{
+    margin-top: 20px;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    height: 90px;
+    z-index: 10;  /*要素の重なり順を指定する。大きな値を持つ要素が手前になる*/
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .header-inner {
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 100px;
+    position: relative;
+  }
+
+  .header-logo {
+    width: 100px;
+  }
+
+  .header-site-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    color: #fff;
+    background-color: #736E62;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    display: none;
+  }
+
+  .header-site-menu.is-show {
+    display: block;
+  }
+
+  .toggle-menu-button {
+    display: block;
+    width: 44px;
+    height: 34px;
+    background-image: url(../images/common/icon-menu.png);
+    background-size: 50px;
+    background-position: center;
+    background-repeat: no-repeat; /*background-repeat は背景画像の繰り返し方法を指定する*/
+    background-color: transparent; /*transparment は透明の意味*/
+    border: none;
+    border-radius: 0;
+    outline: none;  
+  }
+
+  .main {
+    padding-top: 50px;
+  }
+
+  .footer-logo {
+    font-size: 20px;
+  }
+
+  .copyright {
+    margin-top: 50px;
+  }
+
+}

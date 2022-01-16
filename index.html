@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<!--以降はページには表示されないheadコンテンツ。-->
+<head>
+	<meta charset="utf-8">
+	<title>Kissa official website</title>
+	<!--概要欄用の説明文がこの箇所-->
+	<meta name="description" content="インデックス">
+	<!--スマホで見るときに見やすく整形するための指示。width=device-widthを指定することで崩れなくなる-->
+	<meta name="viewport" content="width=device-width">
+	<!--ハンバーガーメニューを表示させるためのJSファイルを読み込む指示-->
+	<script src="./js/toggle-menu.js"></script>
+	<link rel="stylesheet" href="./prac.css/practice_common.css">
+	<link rel="stylesheet" href="./prac.css/index.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<header class="header">
+		<div class="header-inner">
+			<a class="header-logo" href="/index.html">
+				<img src="/images/common/logo-header.png" alt="LOGO">
+			</a>
+			<button class="toggle-menu-button"></button>
+			<div class="header-site-menu">
+				<nav class="site-menu">
+					<ul>
+						<li><a href="/prac.html/concept.html">CONCEPT</a></li>
+						<li><a href="/prac.html/menu.html">MENU</a></li>
+						<li><a href="/prac.html/shop.html">SHOP</a></li>
+						<li><a href="/prac.html/access.html">ACCESS</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<main class="main">
+		<div class="first-view">
+			<div class="first-view-text">
+				<h1>Imagination will <br>take you everywhere.</h1>
+				<p>コーヒーを待つ時間も、特別なひとときになる。</p>
+			</div>
+		</div>
+		<div class="lead">
+			<p>「想像力はあなたをどこにでも連れて行ってくれる」<br>注文を待つ間に広げた、一冊の本の中に見つけたことば。<br>ゆったり流れる時間の中で、想像をふくらませる楽しさを思い出す。<br>そんな時間を過ごすとき、おいしいコーヒーがあるとうれしい。</p>
+			<div class="link-button-area">
+				<!-- div要素を使ってリンクボタンを表示するエリアをつくる -->
+        <a class="link-button" href="/prac.html/concept.html">CONCEPT</a>
+			</div>
+		</div>	
+		<div class="recommended">
+			<h2>RECOMMENDED</h2>
+			<ul class="item-list">
+				<li>
+					<img src="./images/index/img-item01.jpg" alt="カフェラテ商品画像">
+					<dl>
+						<dt>カフェラテ</dt>
+						<dd>エスプレッソとミルク、この組み合わせに勝るものはなかなか見つかりません。ホットしたいとき、やっぱりラテがほしくなる。</dd>
+					</dl>
+					<!-- dlタグ→記述リスト／dtタグ→記述リストの用語／ddタグ→記述リストの説明 -->
+				  <p class="price">￥460</p>
+				</li>
+				<li>
+					<img src="./images/index/img-item02.jpg" alt="レーズンバターサンド商品画像">
+					<dl>
+						<dt>レーズンバターサンド</dt>
+						<dd>コーヒーに合うお菓子を追及して生まれた当店の大人気メニュー。数量・季節ともに限定のため、見つけたらぜひお試しを。</dd>
+					</dl>
+					<!-- dlタグ→記述リスト／dtタグ→記述リストの用語／ddタグ→記述リストの説明 -->
+				  <p class="price">￥480</p>
+				</li>
+				<li>
+					<img src="./images/index/img-item03.jpg" alt="アメリカ―ノ商品画像">
+					<dl>
+						<dt>アメリカ―ノ</dt>
+						<dd>浅煎りの豆をこだわりの配合でブレンドした、すっきりとさわやかな飲み口の当店看板メニュー。ホットでもアイスでも。</dd>
+					</dl>
+					<!-- dlタグ→記述リスト／dtタグ→記述リストの用語／ddタグ→記述リストの説明 -->
+				  <p class="price">￥460</p>
+				</li>
+				<li>
+					<img src="./images/index/img-item04.jpg" alt="レモネード">
+					<dl>
+						<dt>レモネード</dt>
+						<dd>瀬戸内海に浮かぶ小島で、オーナー自らが栽培したとっておきの檸檬を、たっぷりと使った自慢のレモネード。</dd>
+					</dl>
+					<!-- dlタグ→記述リスト／dtタグ→記述リストの用語／ddタグ→記述リストの説明 -->
+				  <p class="price">￥460</p>
+				</li>
+				<li>
+					<img src="./images/index/img-item05.jpg" alt="ホットドッグ">
+					<dl>
+						<dt>ホットドッグ・チリ</dt>
+						<dd>ちょっと小腹がすいたとき、あるとうれしいホットドッグ・チリ。特製チリソースをかければ、もう言葉はいりません。</dd>
+					</dl>
+					<!-- dlタグ→記述リスト／dtタグ→記述リストの用語／ddタグ→記述リストの説明 -->
+				  <p class="price">￥460</p>
+				</li>
+			</ul>
+			<div class="link-button-area">
+				<!-- div要素を使ってリンクボタンを表示するエリアをつくる -->
+        <a class="link-button" href="/prac.html/menu.html">MENU</a>
+			</div>
+		</div>	  
+	</main>
+	<footer class="footer">
+		<nav class="site-menu">
+			<ul>
+				<li><a href="/prac.html/concept.html">CONCEPT</a></li>
+				<li><a href="/prac.html/menu.html">MENU</a></li>
+				<li><a href="/prac.html/shop.html">SHOP</a></li>
+				<li><a href="/prac.html/access.html">ACCESS</a></li>
+			</ul>
+		</nav>
+		<a class="footer-logo" href="/index.html">
+			<img src="./images/common/logo-footer.png" alt="LOGO">
+		</a>
+		<p class="footer-tel">TEL 01-2345-6789</p>
+		<p class="footer-time">OPEN Fri-Sun 11:00-16:00</p>
+		<p class="copyright"><small>&copy;Kissa</small></p>
+	</footer>
+</body>
+
+</html>
